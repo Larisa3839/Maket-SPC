@@ -28,9 +28,15 @@
     font-weight: 500;
     font-style: normal;
 }
-
-body{
+*{
+    padding: 0;
     margin: 0;
+    border: 0;
+}
+ul li{
+    text-decoration: none;
+}
+body{
     background-color: #F8F8F8;
     font-family: 'TT Lakes';
     font-style: Regular;
@@ -47,12 +53,8 @@ header{
     height: 88px;
 }
 .upper-menu{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
     display: flex;
-    list-style-type: none;
+    list-style: none;
     align-items: center;
 }
 .upper-menu__item:not(:last-child){
@@ -84,13 +86,13 @@ h1{
 }
 h1::before{
     content: "";
+    position: absolute;
     width: 4px;
     height: 40px;
     left: 0;
     background-color: #41F6D7;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    position: absolute;
 }
 
 .side-menu{
@@ -150,7 +152,6 @@ h1::before{
    overflow: hidden; 
 }
 .info__text-item{
-    margin-top: 0;
     margin-bottom: 20px;
 }
 .info__img{
