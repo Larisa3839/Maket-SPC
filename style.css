@@ -53,6 +53,8 @@ header{
     height: 88px;
 }
 .upper-menu{
+    height: 100%;
+    width: 100%;
     display: flex;
     list-style: none;
     align-items: center;
@@ -86,13 +88,13 @@ h1{
 }
 h1::before{
     content: "";
-    position: absolute;
     width: 4px;
     height: 40px;
     left: 0;
     background-color: #41F6D7;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+    position: absolute;
 }
 
 .side-menu{
@@ -179,8 +181,11 @@ h1::before{
     ._container{
         padding: 12px 16px;
     }
+    .header{
+        padding: 0 16px;
+    }
     h1{
-        margin: 0;
+        margin: 12px 0;
     }
     li:nth-child(2){
         padding-left: 0;
