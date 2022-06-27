@@ -8,6 +8,7 @@
     font-weight: bold;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'TT Lakes';
     src: url('fonts/TTLakes-Regular.eot');
@@ -18,6 +19,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'TT Lakes';
     src: url('fonts/TTLakes-Medium.eot');
@@ -28,15 +30,14 @@
     font-weight: 500;
     font-style: normal;
 }
-*{
+* {
     padding: 0;
     margin: 0;
     border: 0;
 }
-ul li{
-    text-decoration: none;
-}
-body{
+ul li {text-decoration: none;}
+
+body {
     background-color: #F8F8F8;
     font-family: 'TT Lakes';
     font-style: Regular;
@@ -44,66 +45,70 @@ body{
     line-height: 20px;
     color: #1B1C21;
 }
-._container{
+.content{
+    width: 768px;
+    height: 504px;
+    margin: 0 auto;
+}
+._container {
     padding: 0 24px;
 }
 
-header{
+.header {
     background-color: #FFFFFF;
     height: 88px;
+    margin-bottom: 24px;
 }
-.upper-menu{
+
+.upper-menu {
     height: 100%;
     width: 100%;
     display: flex;
     list-style: none;
     align-items: center;
 }
-.upper-menu__item:not(:last-child){
+
+.upper-menu__item:not(:last-child) {
     flex-basis: 56px;
 }
-li:nth-child(2){
+
+li:nth-child(2) {
     flex-grow: 1;
 }
+
 li:nth-child(6),
-li:nth-child(2){
+li:nth-child(2) {
     padding-left: 18px;
-    border-left: 2px solid #EAEAEA; 
+    border-left: 2px solid #EAEAEA;
 }
 
-.container{
+.container {
     display: flex;
     align-items: center;
-}
-h1{
-    margin-top: 24px;
     margin-bottom: 32px;
-    white-space: nowrap;
+}
+
+h1 { 
+    padding-left: 20px;  
+    transform: translateX(-24px);
     font-family: 'TT Lakes';
     font-style: Bold;
     font-size: 28px;
     line-height: 40px;
+    white-space: nowrap;
     flex-grow: 1;
-    color: #1B1C21; 
-}
-h1::before{
-    content: "";
-    width: 4px;
-    height: 40px;
-    left: 0;
-    background-color: #41F6D7;
+    color: #1B1C21;
+    border-left: 4px solid #41F6D7;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    position: absolute;
 }
-
-.side-menu{
+.side-menu {
     display: flex;
     align-items: center;
     white-space: nowrap;
     overflow: hidden;
 }
-.side-menu__item{
+.side-menu__item {
     font-family: 'TT Lakes';
     font-style: Medium;
     font-size: 16px;
@@ -112,14 +117,15 @@ h1::before{
     text-decoration: none;
     padding: 8px 16px;
 }
-.side-menu__item:hover{
+
+.side-menu__item:hover {
     padding: 6px 14px;
     background-color: #FFFFFF;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
 }
 
-.img__link{
+.img__link {
     visibility: hidden;
     position: relative;
     bottom: -8px;
@@ -135,35 +141,35 @@ h1::before{
     text-decoration: none;
     white-space: nowrap;
 }
-.img__link img{
+
+.img__link img {
     padding-left: 8px;
 }
-.info{
+
+.info {
     padding: 32px 24px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: start;
     justify-content: flex-start;
 }
-.block-text{
+.block-text {
     margin-right: 48px;
 }
-.info__text{
-   width: 312px;
-   height: 160px;
-   overflow: hidden; 
+.info__text {
+    width: 312px;
+    height: 160px;
+    overflow: hidden;
 }
-.info__text-item{
+.info__text-item {
     margin-bottom: 20px;
 }
-.info__img{
+.img {
     width: 360px;
     height: 260px;
-}
-.img{
     border-radius: 6px;
 }
-.button{
+.button {
     margin-top: 10px;
     font-family: 'TT Lakes';
     font-style: Medium;
@@ -174,20 +180,21 @@ h1::before{
     display: flex;
     align-items: center;
     flex-basis: 32px;
-
 }
 
-@media (min-width: 320px) and (max-width: 767px){
-    ._container{
+@media (min-width: 320px) and (max-width: 767px) {
+    .content{
+        width: 320px;
+        height: 597px;
+        margin: 0 auto;
+    }
+    ._container {
         padding: 12px 16px;
     }
-    .header{
+    .header {
         padding: 0 16px;
     }
-    h1{
-        margin: 12px 0;
-    }
-    li:nth-child(2){
+    li:nth-child(2) {
         padding-left: 0;
         border-left: none;
         height: 50px;
@@ -195,7 +202,8 @@ h1::before{
         flex-grow: 1;
         flex-basis: 112px;
     }
-    li:nth-child(3){
+
+    li:nth-child(3) {
         padding-right: 20px;
         border-right: 3px solid #EAEAEA;
         border-radius: 1px;
@@ -203,69 +211,74 @@ h1::before{
     }
     li:nth-child(3),
     li:nth-child(4),
-    li:nth-child(5){
+    li:nth-child(5) {
         display: none;
     }
-    .side-menu{
+    .side-menu {
         overflow: scroll;
     }
-    .info{
-        padding: 12px 16px;  
+    .info {
+        padding: 12px 16px;
     }
-    .info__text{
+    .info__text {
         height: 120px;
-        width: 288px; 
+        width: 288px;
         overflow: hidden;
     }
-    .block-text{
+    .block-text {
         margin-bottom: 16px;
     }
-    .info__img{
-      position: absolute;
-      top: 420px;
-      left: 0;
-    }
-    .img{
+    .img {
+        position: relative;
+        bottom: -170px;
+        left: -350px;
+        right: 0;
         width: 320px;
         height: 176px;
     }
 }
-@media (min-width: 1120px){
-    .header{
+
+@media (min-width: 1120px) {
+    .content{
+        width: 1120px;
+        height: 535px;
+        margin: 0 auto;  
+    }
+    .header {
         display: none;
     }
-    ._container{
-        padding: 0 34px;
+    .container{
+        margin-top: 42px;
     }
     h1{
-        margin-top: 42px;
-        margin-bottom: 8px;
+        transform: translateX(-32px);
+        border-left: 3px solid #41F6D7;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
-    .side-menu{
+    ._container {
+        padding: 0 34px;
+    }
+    .side-menu {
         flex-wrap: wrap;
     }
-    .img__link{
+    .img__link {
         visibility: visible;
     }
-    .info{
+    .info {
         margin-top: 20px;
         flex-wrap: nowrap;
     }
-    .info__text{
+    .info__text {
         height: 180px;
-        width: 490px; 
+        width: 490px;
         overflow: hidden;
     }
-    .block-text{
+    .block-text {
         margin-right: 36px;
     }
-    .img{
+    .img {
         width: 530px;
         height: 307px;
     }
-    .info__img{
-        width: 530px;
-        height: 380px;
-    }
-
 }
