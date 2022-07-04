@@ -90,7 +90,7 @@ h1{
     transform: translateY(-50%) rotate(45deg);
   } 
 
-@media (width: 768px) {
+@media (min-width: 768px) and (max-width: 1120px) {
     .content{
         width:768px;
     }

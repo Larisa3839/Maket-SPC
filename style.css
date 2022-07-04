@@ -36,15 +36,16 @@ a{
 }
 
 body {
-    background-color: #F2F2F2;
     font-family: 'TT Lakes';
     font-size: 14px;
     font-weight: normal;
     line-height: 20px;
     color: #1B1C21;
+    background: #F2F2F2;
 }
 .content{
     width: 768px;
+    height: 100%;
     margin: 0 auto;
 }
 header {
@@ -58,12 +59,14 @@ header {
     display: flex;
     align-items: center;
 }
-.upper-menu__item:not(:last-child) {
+.upper-menu__item:not(:last-child)
+ {
     flex-basis: 56px;
 }
 
 .upper-menu li:nth-child(2) {
     flex-grow: 1;
+    flex-basis: 0;
 }
 
 .upper-menu li:nth-child(6),
@@ -186,6 +189,7 @@ section {
         overflow: scroll;
         margin: 24px 0;
     }
+    .side-menu::-webkit-scrollbar { width: 0; }
     section {
         display: block;
     }
