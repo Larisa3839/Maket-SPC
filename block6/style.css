@@ -84,11 +84,43 @@ h1{
     height: 7px;
     right: 35px;
     bottom: 25px;
-    border-top: 2px solid red;
-    border-right: 2px solid red;
+    border-top: 2px solid #FF3E79;
+    border-right: 2px solid #FF3E79;
     position: absolute;
     transform: translateY(-50%) rotate(45deg);
   } 
+
+button{
+    position: relative;
+    font-family: 'TT Lakes';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+button::before{
+    position: absolute;
+    left: -16px;
+    content:""; 
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #41F6D7;
+    border-top-left-radius: 1px;
+    border-right: 2px solid #41F6D7;
+    transform: rotate(135deg);
+}
+button::after{
+    position: absolute;
+    left: -16px;
+    bottom: 8px;
+    content:""; 
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #41F6D7;
+    border-right: 2px solid #41F6D7;
+    transform: rotate(135deg);
+}
 
 @media (min-width: 768px) and (max-width: 1120px) {
     .content{

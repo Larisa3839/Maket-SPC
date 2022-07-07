@@ -29,10 +29,14 @@ ul li {
 a {
     text-decoration: none;
     color: inherit;
+    display: inline-block;
 }
-
-body {
+.container{
+    display: flex;
+    flex-direction: column;
     width: 320px;
+    padding-left: 24px;
+    padding-top: 24px;
     height: 100%;
     position: fixed;
     background-color: #F8F8F8;
@@ -43,41 +47,69 @@ body {
     color: #1B1C21;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
-
-.upper-menu {
+.block-menu{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 46px;
+    
+}
+.upper-menu{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 23px 24px;
+    gap: 78px;
 }
-
-.upper-menu li:first-child {
-    flex-basis: 56px;
+.upper-menu .block{
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
-
-.upper-menu li:last-child {
-    margin-left: auto;
+.icon{
+    position: relative;
+    display: inline-block;
+    background-image: url('images/burger.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    background-position: center center;
+    background-origin: content-box;
+}
+.icon_burger{
+    background-image: url('images/burger.svg');
+}
+.icon_search{
+    background-image: url('images/search.svg');
+}
+.icon_phone{
+    background-image: url('images/chat\ copy.svg');
+}
+.icon_chat{
+    background-image: url('images/chat.svg');
+}
+.icon_profile{
+    background-image: url('images/profile.svg');
 }
 
 .main-menu {
-    width: 222px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
-
-.main-menu a {
-    display: block;
-    margin-bottom: 32px;
-    padding-left: 24px;
-    white-space: nowrap;
-}
-
-.main-menu a:hover {
+.main-menu .main-menu__link:hover {
     opacity: 0.5;
     transition: opacity 0.2s;
 }
-
-.main-menu li:hover::before {
+.main-menu .main-menu_item{
+    position: relative;
+}
+.main-menu .main-menu_item:hover::before {
     content: "";
     position: absolute;
+    bottom: -1px;
+    left: -24px;
     background-color: #41F6D7;
     z-index: 1;
     width: 4px;
@@ -85,27 +117,27 @@ body {
     border-top-right-radius: 45%;
     border-bottom-right-radius: 45%;
 }
-
-.contacts {
-    padding-left: 24px;
+.block_contacts{
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
-    position: absolute;
-    bottom: 96px;
+    justify-content: flex-end;
+    gap: 40px;
+}
+.contacts {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 14px;
 }
 
-.contacts ul {
-    margin-bottom: 16px;
+.contacts_items {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
-.contacts_items li {
-    display: inline;
-    margin-right: 16px;
-}
-
-.contacts .email {
-    margin-bottom: 12px;
-}
 
 .contacts .phone {
     font-size: 24px;
@@ -114,9 +146,10 @@ body {
 }
 
 .leng {
-    position: absolute;
-    bottom: 32px;
-    left: 24px;
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-start;
+    gap: 24px;
 }
 
 .leng span:first-child {
