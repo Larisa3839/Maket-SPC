@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPS</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,22 +18,66 @@
         </header>
 
         <div class="brands">
-            <div class="brends__item"><img src="images/lenovo.svg"></div>
-            <div class="brends__item"><img src="images/sumsung.svg"></div>
-            <div class="brends__item"><img src="images/aplle.svg"></div>
-            <div class="brends__item"><img src="images/view-sonic.svg"></div>
-            <div class="brends__item"><img src="images/bosch.svg"></div>
-            <div class="brends__item"><img src="images/hp.svg"></div>
-            <div class="brends__item"><img src="images/aser.svg"></div>
-            <div class="brends__item"><img src="images/sony.svg"></div>
-            <div class="brends__item"><img src="images/lenovo.svg"></div>
-            <div class="brends__item"><img src="images/sumsung.svg"></div>
-            <div class="brends__item"><img src="images/aplle.svg"></div>
+            <div class="swiper-container" data-mobile="false">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide spoiler-body">
+                        <img src="images/lenovo.svg">
+                        <span class="swiper-slide_image-button"></span>
+                    </div>
+                    <div class="swiper-slide spoiler-body">
+                        <img src="images/sumsung.svg">
+                        <span class="swiper-slide_image-button"></span>
+                    </div>
+                    <div class="swiper-slide spoiler-body">                      
+                        <img src="images/aplle.svg">
+                        <span class="swiper-slide_image-button"></span>
+                    </div>
+                    <div class="swiper-slide spoiler-body">
+                        <img src="images/view-sonic.svg">
+                        <span class="swiper-slide_image-button"></span>
+                    </div>
+                    <div class="swiper-slide spoiler-body">
+                        <img src="images/bosch.svg">
+                        <span class="swiper-slide_image-button"></span>
+                    </div>
+                    <div class="swiper-slide spoiler-body">
+                        <img src="images/hp.svg">
+                        <span class="swiper-slide_image-button"></span>
+                    </div>
+                    <div class="swiper-slide spoiler-body">
+                        <img src="images/aser.svg">
+                        <span class="swiper-slide_image-button"></span>
+                    </div>
+                    <div class="swiper-slide spoiler-body">
+                        <img src="images/sony.svg">
+                        <span class="swiper-slide_image-button"></span>
+                    </div>
+                    <div class="swiper-slide spoiler-body">
+                        <img src="images/lenovo.svg">
+                        <span class="swiper-slide_image-button"></span>
+                    </div>
+                    <div class="swiper-slide spoiler-body">
+                        <img src="images/sumsung.svg">
+                        <span class="swiper-slide_image-button"></span>
+                    </div>
+                    <div class="swiper-slide spoiler-body">
+                        <img src="images/aplle.svg">
+                        <span class="swiper-slide_image-button"></span>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+    
+            <button type="button"><img class="button_img" src="images/button.svg">
+                <span class="button_text">Показать все</span>
+            </button>
         </div>
 
-        <button>Показать все</button>
 
     </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+
 </body>
 
 </html>
