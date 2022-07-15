@@ -54,7 +54,6 @@ a{
     box-sizing: border-box;
     width: 240px;
     height: 72px;
-    display: flex;
     padding: 0 16px;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
@@ -72,6 +71,7 @@ button{
     display: none;
 }
 .swiper-slide__link{
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -115,12 +115,14 @@ button{
 
 @media (min-width: 768px) and (max-width: 1119px) {
     .content{
-        width:768px;
+        width:768px; 
     }
     .title {
+        display: block;
+        height: 56px;
         padding: 0 24px;
         background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
-        height: 56px;
+        line-height: 56px;
     }
     .brands{
         padding: 24px;
@@ -137,16 +139,18 @@ button{
         grid-auto-rows: 72px;
         column-gap: 24px;
         row-gap: 16px;
+        height: 160px;
+        overflow-y: hidden;
+        transition: height 0.3s;
+    }
+    .hidden {
+        height: 340px;
     }
     .swiper-slide{
         width: auto;
         height: auto;
         display: grid;
         padding: 0 16px;
-    }
-    .slide--hidden{
-        display: none;
-        
     }
     .swiper-pagination{
         display: none;
@@ -182,11 +186,11 @@ button{
         width: 1120px;
     }
     .title {
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+        display: block;
         height: 56px;
+        box-sizing: border-box;
+        background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+        line-height: 56px;
         padding: 0 32px;
     }
     h1{
@@ -211,6 +215,12 @@ button{
         grid-auto-rows: 72px;
         column-gap: 32px;
         row-gap: 16px;
+        height: 160px;
+        overflow-y: hidden;
+        transition: height 0.3s;
+    }
+    .hidden {
+        height: 340px;
     }
     .swiper-slide{
         width: auto;
@@ -256,9 +266,6 @@ button{
         transform: rotate(45deg);
     }
     
-    .slide--hidden{
-        display: none;
-    }
     .swiper-pagination{
         display: none;
     }
