@@ -26,9 +26,13 @@ a{
     color: inherit;
 }
 .content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     box-sizing: border-box;
     width: 320px;
     margin: 0 auto;
+    background: #F2F2F2;
 }
 .title {
     box-sizing: border-box;
@@ -46,8 +50,8 @@ a{
 }
 .brands{
     position: relative;
-    padding: 16px 0 38px 16px;
-    background: #F2F2F2;
+    padding: 0 0 38px 16px;
+    
     overflow: hidden;
 }
 .swiper-slide{
@@ -67,11 +71,11 @@ a{
 .swiper-pagination-bullet-active{
     background-color: #B5B6BC;
 }
-button{
+.brands_button{
     display: none;
 }
 .swiper-slide__link{
-    height: 72px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -115,17 +119,17 @@ button{
 
 @media (min-width: 768px) and (max-width: 1119px) {
     .content{
+        gap: 24px;
         width:768px; 
     }
     .title {
         display: block;
         height: 56px;
         padding: 0 24px;
-        background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
         line-height: 56px;
     }
     .brands{
-        padding: 24px;
+        padding: 0 24px 24px;
         overflow: visible;
         height: auto;
     }
@@ -155,7 +159,8 @@ button{
     .swiper-pagination{
         display: none;
     }
-    button{
+    .brands_button{
+        cursor: pointer;
         display: block;
         position: relative;
         padding-left: 24px;
@@ -166,7 +171,7 @@ button{
         line-height: 24px;
     }
     
-    button::before{
+    .brands_button::before{
         content: "";
         position: absolute;
         left: 0px;
@@ -184,12 +189,12 @@ button{
 @media (min-width: 1120px) {
     .content{
         width: 1120px;
+        gap: 24px;
     }
     .title {
         display: block;
         height: 56px;
         box-sizing: border-box;
-        background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
         line-height: 56px;
         padding: 0 32px;
     }
@@ -203,7 +208,7 @@ button{
         text-transform: uppercase;
     }
     .brands{
-        padding: 24px 32px;
+        padding: 0 32px 24px;
     }
     .swiper-container{
         padding-bottom: 24px;
@@ -270,7 +275,7 @@ button{
         display: none;
     }
     
-    button{
+    .brands_button{
         display: block;
         position: relative;
         padding-left: 24px;
@@ -281,7 +286,7 @@ button{
         line-height: 24px;
     }
     
-    button::before{
+    .brands_button::before{
         content: "";
         position: absolute;
         left: 0px;
@@ -296,192 +301,3 @@ button{
     }
 
 }
-/*.content{
-    width: 1120px;
-    margin: 0 auto;
-}
-.title {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
-    height: 56px;
-    padding: 0 32px;
-}
-h1{
-    flex-grow: 1;
-    font-family: 'TT Lakes';
-    font-size: 16px;
-    line-height: 32px;
-    color: #7E7E82;
-    font-weight: normal;
-    text-transform: uppercase;
-}
-.brands{
-    padding: 24px 32px;
-    background: #F2F2F2;
-}
-.swiper-container{
-    padding-bottom: 24px;
-}
-.swiper-wrapper{
-    display: grid;
-    grid-template-columns: repeat(4, 240px);
-    grid-template-rows: repeat(2, 72px);
-    grid-auto-rows: 72px;
-    column-gap: 32px;
-    row-gap: 16px;
-}
-.swiper-slide{
-    width: auto;
-    height: auto;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(1, auto);
-    background: #FFFFFF;
-    border: 1px solid #EAEAEA;
-    border-radius: 6px;
-    align-items: center;
-    padding: 0 16px;
-}
-
-.swiper-slide_image-button{
-    position: relative;
-    justify-self: end;
-    height: 40px;
-    width: 40px;
-    border: 2px solid #FF3E79;
-    border-radius: 50%;
-}
-.swiper-slide_image-button::before{
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 8px;
-    right: 17px;
-    top: 14px;
-    background-color: #FF3E79;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    transform: rotate(135deg);
-}
-.swiper-slide_image-button::after{
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 8px;
-    right: 17px;
-    bottom: 14px;
-    background-color: #FF3E79;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    transform: rotate(45deg);
-}
-
-.slide--hidden{
-    display: none;
-}
-.swiper-pagination{
-    display: none;
-}
-
-button{
-    position: relative;
-    padding-left: 24px;
-    font-family: 'TT Lakes';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-button::before{
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 5px;
-    width: 8px;
-    height: 11px;
-    background-image: url('images/button.svg');
-}
-
-.button--open::before{
-    transform: rotate(180deg);
-}
-
-@media (max-width: 767px) {
-    .content{
-        width: 320px;
-    }
-    .title {
-        background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
-        height: 80px;
-        padding: 0 16px;
-    }
-    .brands{
-        padding: 16px 0 16px 16px;
-    }
-    .swiper-container{
-        overflow: hidden;
-    }
-    .swiper-wrapper{
-        display: grid;
-        grid-template-columns: repeat(11, 240px);
-        grid-template-rows: repeat(1, 72px);
-        column-gap: 16px;
-        padding-bottom: 16px;
-    }
-
-    .swiper-slide{
-        box-sizing: border-box;
-        width: 240px !important;
-    }
-   
-    .swiper-pagination{
-        display: block;
-        position: static;
-    }
-    
-    .swiper-pagination-bullet{
-        height: 12px;
-        width: 12px;
-    }
-    .swiper-pagination-bullet-active{
-        background-color: #B5B6BC;
-    }
-    button{
-        display: none;
-    }
-   
-}
-
-@media (min-width: 768px) and (max-width: 1119px) {
-    .content{
-        width:768px;
-    }
-    .title {
-        padding: 0 24px;
-        background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
-    }
-    .brands{
-        padding: 24px 24px;
-    }
-    .swiper-wrapper{
-        display: grid;
-        grid-template-columns: repeat(3, 224px);
-        grid-template-rows: repeat(2, 72px);
-        grid-auto-rows: 72px;
-        column-gap: 24px;
-        row-gap: 16px;
-    }
-    .slide--hidden{
-        display: none;
-    }
-
-
-}*/
